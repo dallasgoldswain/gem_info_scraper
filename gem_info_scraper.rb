@@ -29,7 +29,7 @@ end
 
 puts 'Writing to results/gems-info.csv'
 directory_name = "results"
-Dir.mkdir(directory_name) unless File.exists?(directory_name)
+Dir.mkdir(directory_name) unless Dir.exist?(directory_name)
 
 CSV.open("./#{directory_name}/gems-info.csv", 'w') do |csv|
   csv << ['Gem', 'Summary', 'Project URI', 'Homepage URI', 'Documentation URI',
