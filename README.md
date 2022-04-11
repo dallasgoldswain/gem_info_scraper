@@ -1,6 +1,5 @@
-# ruby-scraper
-A repository of useful stand-alone Ruby programs.
+# Gem info scraper
 
 How to Run
 ~~~~~~~~~~
-ruby gems-scraper.rb /path/to/Gemfile1 /path/to/Gemfile2 /path/to/Gemfile3
+ruby gems_info_scraper.rb /path/to/Gemfile1 /path/to/Gemfile2 etc
