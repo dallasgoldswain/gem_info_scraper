@@ -28,7 +28,10 @@ ARGV.each do |gemfile|
 end
 
 puts 'Writing to results/gems-info.csv'
-CSV.open('results/gems-info.csv', 'w') do |csv|
+directory_name = "results"
+Dir.mkdir(directory_name) unless File.exists?(directory_name)
+
+CSV.open("./#{directory_name}/gems-info.csv", 'w') do |csv|
   csv << ['Gem', 'Summary', 'Project URI', 'Homepage URI', 'Documentation URI',
           'Source Code URI', 'Development Dependencies', 'Runtime Dependencies']
   gems_info_arr.each do |line|
